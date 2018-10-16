@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF5F91CF</color>
+    <color name="colorPrimaryDark">#FF113A69</color>
+    <color name="colorAccent">#00c753</color>
+    <color name="textPrimary">#3e3d3d</color>
+    <color name="textSecondary">#918f8f</color>
+
+
+    <color name="google_plus_brand_color">#dc4e41</color>
+    <color name="facebook_color">#3b5998</color>
+    <color name="white">#ffffff</color>
+    <color name="online">#4AD511</color>
+
+    <color name="iron">#CCCCCC</color>
+    <color name="iron_ligth">#f4f1f1</color>
+    <color name="iron_dark">#585656</color>
+    <color name="darkRed">#FFB31921</color>
+</resources>

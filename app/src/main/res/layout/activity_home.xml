@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.HomeActivity">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/spacing_small">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.85" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.01" />
+
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/card_inicio_uno"
+                style="@style/card_inicio"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline5">
+
+            </android.support.design.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/text_registro_facebook"
+                style="@style/ContentTextInicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="10dp"
+                android:text="@string/home_ver_medico"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_uno"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/image_avatar_uno"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_uno" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/inicio_uno"
+                android:elevation="@dimen/elevarion_card"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_uno"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_uno"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_white_48dp" />
+
+            <ImageView
+                android:id="@+id/image_avatar_uno"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/inicio_uno"
+                android:elevation="@dimen/elevarion_card"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_uno"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/card_inicio_uno"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_uno" />
+
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="80dp" />
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/card_inicio_dos"
+                style="@style/card_inicio"
+                android:layout_width="0dp"
+
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline2"
+                app:layout_constraintVertical_bias="0.0">
+
+            </android.support.design.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/text_inicio_dos"
+                style="@style/ContentTextInicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="@dimen/elevarion_card"
+                android:text="@string/inicio_dos"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_dos"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/image_avatar_dos"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_dos" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/inicio_uno"
+                android:elevation="@dimen/elevarion_card"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_dos"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_dos"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_white_48dp" />
+
+            <ImageView
+                android:id="@+id/image_avatar_dos"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/inicio_dos"
+                android:elevation="@dimen/elevarion_card"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_dos"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/card_inicio_dos"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_dos" />
+
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="160dp" />
+
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/card_inicio_tres"
+                style="@style/card_inicio"
+                android:layout_width="0dp"
+
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline6">
+
+            </android.support.design.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/text_inicio_tres"
+                style="@style/ContentTextInicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="@dimen/elevarion_card"
+                android:text="@string/home_enviar_consulta"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_tres"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/image_avatar_tres"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_tres" />
+
+
+            <ImageView
+                android:id="@+id/image_avatar_tres"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/inicio_tres"
+                android:elevation="@dimen/elevarion_card"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_tres"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/card_inicio_tres"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_tres" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/inicio_uno"
+                android:elevation="@dimen/elevarion_card"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_tres"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_tres"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_white_48dp" />
+
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="240dp" />
+
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/card_inicio_cuatro"
+                style="@style/card_inicio2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
+                app:layout_constraintVertical_bias="1.0">
+
+            </android.support.design.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/text_inicio_cuatro"
+                style="@style/ContentTextInicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="@dimen/elevarion_card"
+                android:text="@string/inicio_tres"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_cuatro"
+                app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                app:layout_constraintStart_toEndOf="@+id/image_avatar_cuatro"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_cuatro" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/inicio_uno"
+                android:elevation="@dimen/elevarion_card"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_cuatro"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_cuatro"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_white_48dp" />
+
+            <ImageView
+                android:id="@+id/image_avatar_cuatro"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/inicio_cuatro"
+                android:elevation="@dimen/elevarion_card"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_cuatro"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/card_inicio_cuatro"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_cuatro" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="320dp" />
+
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/card_inicio_cinco"
+                style="@style/card_inicio3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline9"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/text_inicio_cinco"
+                style="@style/ContentTextInicio2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="@dimen/elevarion_card"
+                android:text="@string/home_mi_agenda"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_cinco"
+                app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                app:layout_constraintStart_toEndOf="@+id/image_avatar_cinco"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_cinco" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/inicio_cinco"
+                android:elevation="@dimen/elevarion_card"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_cinco"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_cinco"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_iron_dark_48dp" />
+
+            <ImageView
+                android:id="@+id/image_avatar_cinco"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/inicio_cinco"
+                android:elevation="@dimen/elevarion_card"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_cinco"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/card_inicio_cinco"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_cinco" />
+
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="390dp" />
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/card_inicio_seis"
+                style="@style/card_inicio3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline10"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+            <TextView
+                android:id="@+id/text_inicio_seis"
+                style="@style/ContentTextInicio2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="@dimen/elevarion_card"
+                android:text="@string/home_historico"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_seis"
+                app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                app:layout_constraintStart_toEndOf="@+id/image_avatar_seis"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_seis" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/inicio_seis"
+                android:elevation="@dimen/elevarion_card"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_seis"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_seis"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_iron_dark_48dp" />
+
+            <ImageView
+                android:id="@+id/image_avatar_seis"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/inicio_seis"
+                android:elevation="@dimen/elevarion_card"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_seis"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/card_inicio_seis"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_seis" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="460dp" />
+
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/card_inicio_siete"
+                style="@style/card_inicio3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/guideline11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline8"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/text_inicio_siete"
+                style="@style/ContentTextInicio2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:elevation="@dimen/elevarion_card"
+                android:text="@string/home_beneficiarios"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_siete"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_siete" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/inicio_cinco"
+                android:elevation="@dimen/elevarion_card"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_siete"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_siete"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_iron_dark_48dp" />
+
+            <ImageView
+                android:id="@+id/image_avatar_siete"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/inicio_cinco"
+                android:elevation="@dimen/elevarion_card"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_siete"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/card_inicio_siete"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_siete" />
+
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="530dp" />
+
+            <!---->
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/card_inicio_ocho"
+                style="@style/card_inicio3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.173"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+            <TextView
+                android:id="@+id/text_inicio_ocho"
+                style="@style/ContentTextInicio2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:elevation="@dimen/elevarion_card"
+                android:text="@string/home_faq"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_ocho"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_ocho" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/inicio_cinco"
+                android:elevation="@dimen/elevarion_card"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_ocho"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_ocho"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_iron_dark_48dp" />
+
+            <ImageView
+                android:id="@+id/image_avatar_ocho"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/inicio_cinco"
+                android:elevation="@dimen/elevarion_card"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_ocho"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/card_inicio_ocho"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_ocho" />
+
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="600dp" />
+
+
+
+            <!---->
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/card_inicio_nueve"
+                style="@style/card_inicio3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.173"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
+            <TextView
+                android:id="@+id/text_inicio_nueve"
+                style="@style/ContentTextInicio2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:elevation="@dimen/elevarion_card"
+                android:text="@string/home_terminos"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_nueve"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_nueve" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/inicio_cinco"
+                android:elevation="@dimen/elevarion_card"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_nueve"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_nueve"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_iron_dark_48dp" />
+
+            <ImageView
+                android:id="@+id/image_avatar_nueve"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/inicio_cinco"
+                android:elevation="@dimen/elevarion_card"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="@+id/card_inicio_nueve"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/card_inicio_nueve"
+                app:layout_constraintTop_toTopOf="@+id/card_inicio_nueve" />
+
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="670dp" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

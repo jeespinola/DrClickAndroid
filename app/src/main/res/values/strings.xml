@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Solumed</string>
+    <string name="facebook_app_id">281223265934283</string> <string name="fb_login_protocol_scheme">fb281223265934283</string>
+    <string-array name="facebook_permission">
+        <item>email</item>
+        <item>user_birthday</item>
+        <item>user_photos</item>
+
+    </string-array>
+
+    <string name="inicio_uno">Consultar con un medico ahora</string>
+    <string name="inicio_dos">Agendar un turno</string>
+    <string name="inicio_tres">Pedir una ambulancia</string>
+    <string name="inicio_cuatro">Registrarme como usuario</string>
+    <string name="inicio_cinco">Preguntas Frecuentes</string>
+    <string name="inicio_seis">Terminos y condiciones</string>
+    <string name="registro_ingresar_con">Ingresar con</string>
+    <string name="registro_facebbok">Mi cuenta de Facebook</string>
+    <string name="registro_gmail">Mi cuenta de Gmail</string>
+    <string name="registro_app">Mi cuenta Solumed</string>
+    <string name="nueva_cuenta">Registrarme</string>
+    <string name="registro_crear_nueva_cuenta">Crear mi cuenta Solumed</string>
+    <string name="home_ver_medico">Ver un medico ahora</string>
+    <string name="home_enviar_consulta">Enviar una consulta</string>
+    <string name="home_mi_agenda">Mi agenda de turnos</string>
+    <string name="home_historico">Historico de consultas</string>
+    <string name="home_beneficiarios">Registrar mi familia</string>
+    <string name="home_terminos">Terminos y condiciones</string>
+    <string name="home_faq">Preguntas frecuentes</string>
+    <string name="imagen_content">TODO</string>
+    <string name="add_favoritos">Anadir a Favoritos</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="agendarme">Agendarme</string>
+    <string name="consultas">Consultas</string>
+</resources>

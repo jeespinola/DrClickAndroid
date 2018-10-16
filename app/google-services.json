@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "606073937752",
+    "firebase_url": "https://solumed-c5b65.firebaseio.com",
+    "project_id": "solumed-c5b65",
+    "storage_bucket": "solumed-c5b65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606073937752:android:361fda72b3f87660",
+        "android_client_info": {
+          "package_name": "py.org.ideasweb.solumend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606073937752-cr3chmac8ev0bl2qqhoelu4d66c22n1k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "py.org.ideasweb.solumend",
+            "certificate_hash": "073fd4b54bf9a5af481e20477b44c533d0742584"
+          }
+        },
+        {
+          "client_id": "606073937752-q8ebl2eocl9ap03amd5jqmb8a8jm1cbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI4C0SVKyIrUMABfWaFSO9IT3qGmk6rcs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606073937752-q8ebl2eocl9ap03amd5jqmb8a8jm1cbo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
