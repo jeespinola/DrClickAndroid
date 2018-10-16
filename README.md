@@ -30,7 +30,7 @@ ext {
 
 ### Fork el repo
 
-Ingresar al git, ir al repositorio, https://github.com/solumed/solumedAndroid.git y en la parte superior derecha, click en fork.
+Ingresar al git, ir al repositorio, https://github.com/SOLUMED/DrClickAndroid.git y en la parte superior derecha, click en fork.
 
 ### Clonar el repo
 
