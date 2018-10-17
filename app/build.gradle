@@ -10,6 +10,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        resConfigs "es" // And any other languages you support
+
     }
     buildTypes {
         debug {
@@ -70,13 +72,13 @@ dependencies {
     //firebase
     implementation "com.google.firebase:firebase-core:$rootProject.ext.firebaseVersion"
     implementation "com.google.firebase:firebase-auth:$rootProject.ext.firebaseVersion"
-  //  implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+    implementation 'com.firebaseui:firebase-ui-auth:4.2.0'
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
     // Google Play Services
     implementation "com.google.android.gms:play-services-auth:$rootProject.ext.googleServicesVersion"
 
     //smart login
-    implementation 'codelight.studios:android-smart-login:1.2'
-
+    //implementation 'codelight.studios:android-smart-login:1.2'
 
 
     testImplementation 'junit:junit:4.12'

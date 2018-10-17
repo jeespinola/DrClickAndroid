@@ -1,9 +1,10 @@
 package py.org.ideasweb.solumend.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import py.org.ideasweb.solumend.R;
 
@@ -26,18 +27,5 @@ public class HomeActivity extends BaseActivity {
         return true;
     }
 
-    // menu de opciones
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.menu_item_ingresar:
 
-                break;
-
-            default:
-                break;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

@@ -26,7 +26,7 @@
             android:id="@+id/text_titulo_toolbar"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Hola, Usuario"
+            android:text=""
             android:gravity="center"
             style="@style/ContentTextToolbar"
             android:layout_centerVertical="true"

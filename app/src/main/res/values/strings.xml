@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Solumed</string>
-    <string name="facebook_app_id">281223265934283</string> <string name="fb_login_protocol_scheme">fb281223265934283</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb281223265934283</string>
+    <string name="facebook_application_id" translatable="false">281223265934283</string>
+    <string name="oauth_client" translatable="false">606073937752-cr3chmac8ev0bl2qqhoelu4d66c22n1k.apps.googleusercontent.com</string>
+
+
     <string-array name="facebook_permission">
         <item>email</item>
         <item>user_birthday</item>

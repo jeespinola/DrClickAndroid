@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.orhanobut.logger.Logger;
@@ -36,23 +38,24 @@ public class MainActivity extends BaseActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.menu_visitante, menu);
-        return true;
-    }
+//        return true;
 
-    // menu de opciones
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.menu_item_ingresar:
-                Intent intent = new Intent(this, RegistroActivity.class);
+        final MenuItem alertMenuItem = menu.findItem(R.id.menu_item_ingresar);
+        LinearLayout rootView = (LinearLayout) alertMenuItem.getActionView();
+
+        rootView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             //   Logger.d("Click en el view");
+                Intent intent = new Intent(MainActivity.this, RegistroActivity.class);
                 startActivity(intent);
+                finish();
+            }
+        });
 
-                break;
 
-            default:
-                break;
-        }
-
-        return super.onOptionsItemSelected(item);
+        return super.onPrepareOptionsMenu(menu);
     }
+
+
 }
