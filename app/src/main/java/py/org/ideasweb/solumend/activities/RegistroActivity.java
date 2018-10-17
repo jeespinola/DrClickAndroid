@@ -1,5 +1,6 @@
 package py.org.ideasweb.solumend.activities;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -19,11 +20,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.orhanobut.logger.Logger;
 
 import butterknife.BindView;
+import dmax.dialog.SpotsDialog;
 import py.org.ideasweb.solumend.R;
 import py.org.ideasweb.solumend.models.seguridad.CredentialValues;
 import py.org.ideasweb.solumend.models.seguridad.LoginData;
@@ -45,7 +46,7 @@ public class RegistroActivity extends BaseActivity {
     GoogleSignInClient mGoogleSignInClient;
 
     private static final int RC_SIGN_IN = 123;
-
+    private AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,20 +54,14 @@ public class RegistroActivity extends BaseActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setListeners();
-
-
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .build();
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        mAuth = FirebaseAuth.getInstance();
-
-
+        inicializar();
 
     }
 
+
+
     private void signInGmail() {
+       //loading(dialog);
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
 
@@ -74,6 +69,7 @@ public class RegistroActivity extends BaseActivity {
     }
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
+
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         mAuth.signInWithCredential(credential)
@@ -103,6 +99,7 @@ public class RegistroActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 // Perform Facebook login
+               // loading(dialog);
 
             }
         });
@@ -117,7 +114,7 @@ public class RegistroActivity extends BaseActivity {
         cardRegitroApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+              //  loading(dialog);
                /* mAuth.createUserWithEmailAndPassword("jaimeferreira11@gmail.com", "123456")
                         .addOnCompleteListener(RegistroActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -146,6 +143,21 @@ public class RegistroActivity extends BaseActivity {
         return R.layout.activity_registro;
     }
 
+    @Override
+    public void inicializar() {
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        mAuth = FirebaseAuth.getInstance();
+
+        dialog = new SpotsDialog.Builder()
+                .setContext(this)
+                .setTheme(R.style.spots)
+                .build();
+
+    }
 
 
     @Override
@@ -172,12 +184,6 @@ public class RegistroActivity extends BaseActivity {
         }
     }
 
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -142,6 +142,16 @@
         <item name="android:elevation">@dimen/elevarion_card</item>
     </style>
 
+    <!--Spots dialog-->
+    <style name="spots" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">@string/spot_title</item>
+        <item name="DialogSpotColor">@color/colorAccent</item>
+        <item name="android:background">@color/iron_ligth</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="DialogSpotCount">4</item>
+    </style>
+
 
 
 </resources>

@@ -16,4 +16,9 @@ public class MedicoPerfilActivity extends BaseActivity {
     public int getLayoutId() {
         return R.layout.activity_medico_perfil;
     }
+
+    @Override
+    public void inicializar() {
+
+    }
 }

@@ -33,6 +33,11 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
+    @Override
+    public void inicializar() {
+
+    }
+
     // se infla el menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

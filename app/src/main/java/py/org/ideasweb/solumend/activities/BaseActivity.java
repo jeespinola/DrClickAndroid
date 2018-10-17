@@ -1,5 +1,6 @@
 package py.org.ideasweb.solumend.activities;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.firebase.auth.FirebaseAuth;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
@@ -14,6 +17,7 @@ import com.squareup.leakcanary.LeakCanary;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import dmax.dialog.SpotsDialog;
 import icepick.Icepick;
 import py.org.ideasweb.solumend.R;
 import py.org.ideasweb.solumend.models.seguridad.CredentialValues;
@@ -23,6 +27,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
+    public FusedLocationProviderClient mFusedLocationClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +54,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         TextView title =(TextView)mToolbar.findViewById(R.id.text_titulo_toolbar);
         if(CredentialValues.getLoginData()!= null)
         title.setText("Hola, " + CredentialValues.getLoginData().getFirebaseUser().getDisplayName());
+
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
     }
 
     @Override public void onSaveInstanceState(Bundle outState) {
@@ -57,6 +64,17 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     public abstract int getLayoutId();
+
+    public abstract void inicializar();
+
+    public void loading(AlertDialog dialog){
+        if(dialog != null)
+        if ((dialog.isShowing())) {
+            dialog.dismiss();
+        } else {
+            dialog.show();
+        };
+    }
 
     // menu de opciones
     @Override
